@@ -37,7 +37,7 @@ group :test do
 end
 
 # devise
-gem 'devise', '~>3.0.0rc'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
