@@ -19,4 +19,17 @@ class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
 end
+class ActionController::TestCase
+  include Devise::TestHelpers
+end
+
+def sign_in_user
+  User.create(email: "johanna.doe@example.com", password: "secret12", password_confirmation: "secret12")
+  visit root_path
+  click_link "Sign in"
+  fill_in 'Email', with: 'johanna.doe@example.com'
+  fill_in 'Password', with: 'secret12'
+
+  click_button "Sign in"
+end
 

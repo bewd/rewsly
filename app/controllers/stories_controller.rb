@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
     @stories = params[:q] ? Story.search_for(params[:q]) : Story.all
@@ -23,4 +24,3 @@ class StoriesController < ApplicationController
     end
   end
 end
-
