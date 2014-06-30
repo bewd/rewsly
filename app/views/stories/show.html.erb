@@ -1,5 +1,7 @@
 <h1><%= @story.title %></h1>
-<h3><%= @story.user.email %></h3>
+<% if @story.user %>
+  <h3><%= @story.user.email %></h3>
+<% end %>
 <p><%= link_to @story.link, @story.link %>
 <p><%= link_to "Back to home page", root_path %></p>
 
