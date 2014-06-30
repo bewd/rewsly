@@ -1,0 +1,10 @@
+<h3>My Stories<h3>
+
+<h3><%= link_to "Home", root_path %></h3>
+
+<div id="stories">
+  <ul>
+    <%= render current_user.stories %>
+  </ul>
+</div>
+
