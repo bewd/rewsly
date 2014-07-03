@@ -3,4 +3,6 @@ Rewsly::Application.routes.draw do
   root 'stories#index'
   resources :stories
   resources :users, only: :show
+  resources :comments, only: [:new, :create]
 end
+

@@ -1,0 +1,21 @@
+<h1>Comment on this story:</h1>
+<h3><%= @story.title %></h3>
+<%= form_for @comment do |f| %>
+  <fieldset>
+    <legend>Comment</legend>
+    <div>
+      <%= f.label :desc %>
+      <%= f.text_field :desc %>
+    </div>
+    <div>
+      <%= f.label :link %>
+      <%= f.text_field :link %>
+    </div>
+    <div>
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+    </div>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
+
